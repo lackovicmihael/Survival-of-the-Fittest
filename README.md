@@ -1,14 +1,14 @@
 # Survival of the Fittest
 
-**Survival of the Fittest** je studentski projekt izrađen za kolegij **Web Programiranje**. Aplikacija omogućuje korisnicima registraciju, prijavu, pregled fitness izazova, slanje rezultata, prikupljanje bodova, pregled profila, leaderboard te izračun BMI vrijednosti.
+**Survival of the Fittest** is a student project developed for the **Web Programming** course. The application allows users to register, log in, browse fitness challenges, submit challenge results, earn points, view their profile, compete on the leaderboard, and calculate their BMI.
 
-Projekt koristi vlastiti **Django REST API** za komunikaciju s **Firebase Firestore** bazom podataka.
+The project uses a custom **Django REST API** to communicate with a **Firebase Firestore** database.
 
 ---
 
-## Tehnologije
+# Technologies
 
-### Frontend
+## Frontend
 
 * HTML5
 * CSS3
@@ -17,49 +17,49 @@ Projekt koristi vlastiti **Django REST API** za komunikaciju s **Firebase Firest
 * Vanilla JavaScript
 * Fetch API
 
-### Backend
+## Backend
 
 * Python
 * Django
 * Django REST Framework
 
-### Baza podataka
+## Database
 
 * Firebase Firestore
 
-### Razmjena podataka
+## Data Exchange Format
 
 * JSON
 
 ---
 
-## Funkcionalnosti
+# Features
 
-* Registracija korisnika
-* Prijava korisnika
-* Hashiranje lozinki na backendu
-* Pregled fitness izazova
-* Filtriranje izazova po kategoriji
-* Prikaz detalja izazova
-* Slanje rezultata izazova
-* Automatsko dodavanje bodova nakon uspješnog završetka izazova
-* Korisnički profil
-* Pregled vlastitih rezultata
+* User registration
+* User login
+* Password hashing on the backend
+* Browse fitness challenges
+* Filter challenges by category
+* View challenge details
+* Submit challenge results
+* Automatic point awarding after successful challenge completion
+* User profile
+* View personal challenge history
 * Leaderboard
-* BMI kalkulator
-* Stranica s korištenim izvorima
+* BMI calculator
+* Sources and references page
 
 ---
 
-## Firebase postavljanje
+# Firebase Setup
 
-Prije pokretanja projekta potrebno je napraviti Firebase projekt i uključiti **Cloud Firestore Database**.
+Before running the project, create a Firebase project and enable **Cloud Firestore Database**.
 
-1. Otvoriti **Firebase Console**.
-2. Napraviti novi projekt.
-3. Uključiti **Cloud Firestore**.
-4. U **Project Settings → Service Accounts** generirati novi **Private Key**.
-5. Preuzetu datoteku spremiti u:
+1. Open **Firebase Console**.
+2. Create a new Firebase project.
+3. Enable **Cloud Firestore Database**.
+4. Go to **Project Settings → Service Accounts** and generate a new **Private Key**.
+5. Place the downloaded file in:
 
 ```text
 backend/serviceAccountKey.json
@@ -67,21 +67,21 @@ backend/serviceAccountKey.json
 
 ---
 
-## Pokretanje projekta
+# Running the Project
 
-### 1. Otvoriti backend direktorij
+## 1. Open the backend directory
 
 ```bash
 cd backend
 ```
 
-### 2. Napraviti virtual environment
+## 2. Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-### 3. Aktivirati virtual environment
+## 3. Activate the virtual environment
 
 **Windows**
 
@@ -95,13 +95,13 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-### 4. Instalirati potrebne pakete
+## 4. Install the required dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Napraviti `.env` datoteku
+## 5. Create the `.env` file
 
 **Windows**
 
@@ -115,61 +115,61 @@ copy .env.example .env
 cp .env.example .env
 ```
 
-### 6. Pokrenuti Django migracije
+## 6. Run Django migrations
 
 ```bash
 python manage.py migrate
 ```
 
-### 7. Ubaciti početne challenge podatke u Firestore
+## 7. Seed the initial challenge data into Firestore
 
 ```bash
 python manage.py seed_challenges
 ```
 
-### 8. Pokrenuti backend
+## 8. Start the backend server
 
 ```bash
 python manage.py runserver
 ```
 
-Backend će biti dostupan na:
+The backend will be available at:
 
 ```text
 http://127.0.0.1:8000
 ```
 
-### 9. Pokrenuti frontend
+## 9. Run the frontend
 
-Otvoriti datoteku:
+Open:
 
 ```text
 frontend/index.html
 ```
 
-pomoću **Live Server** ekstenzije u Visual Studio Codeu.
+using the **Live Server** extension in Visual Studio Code.
 
 ---
 
-## API rute
+# API Endpoints
 
-| Metoda | Ruta                   | Opis                       |
-| ------ | ---------------------- | -------------------------- |
-| POST   | `/api/register`        | Registracija korisnika     |
-| POST   | `/api/login`           | Prijava korisnika          |
-| GET    | `/api/challenges`      | Dohvat svih izazova        |
-| GET    | `/api/challenges/<id>` | Dohvat pojedinog izazova   |
-| POST   | `/api/submissions`     | Slanje rezultata izazova   |
-| GET    | `/api/my-submissions`  | Dohvat vlastitih rezultata |
-| GET    | `/api/profile`         | Korisnički profil          |
-| GET    | `/api/leaderboard`     | Leaderboard korisnika      |
-| POST   | `/api/bmi`             | Izračun BMI vrijednosti    |
+| Method | Endpoint               | Description                             |
+| ------ | ---------------------- | --------------------------------------- |
+| POST   | `/api/register`        | Register a new user                     |
+| POST   | `/api/login`           | User login                              |
+| GET    | `/api/challenges`      | Retrieve all challenges                 |
+| GET    | `/api/challenges/<id>` | Retrieve a specific challenge           |
+| POST   | `/api/submissions`     | Submit a challenge result               |
+| GET    | `/api/my-submissions`  | Retrieve the current user's submissions |
+| GET    | `/api/profile`         | Retrieve the current user's profile     |
+| GET    | `/api/leaderboard`     | Retrieve the leaderboard                |
+| POST   | `/api/bmi`             | Calculate BMI                           |
 
 ---
 
-## Firestore kolekcije
+# Firestore Collections
 
-Projekt koristi sljedeće kolekcije:
+The project uses the following Firestore collections:
 
 * `users`
 * `challenges`
