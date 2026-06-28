@@ -103,17 +103,14 @@ pip install -r requirements.txt
 
 ## 5. Create the `.env` file
 
-**Windows**
+survival-of-the-fittest/backend
 
-```bash
-copy .env.example .env
-```
+Create file ".env" and put:
+DJANGO_SECRET_KEY=change-this-dev-secret-key
+DJANGO_DEBUG=True
+FIREBASE_CREDENTIALS_PATH=serviceAccountKey.json
+CORS_ALLOW_ALL_ORIGINS=True
 
-**Linux / macOS**
-
-```bash
-cp .env.example .env
-```
 
 ## 6. Run Django migrations
 
