@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="hr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile | Survival of the Fittest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-activity text-primary me-2"></i>Survival of the Fittest</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="challenges.html">Challenges</a></li>
+                <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="sources.html">Sources</a></li>
+                <li class="nav-item d-none" data-auth><a class="nav-link active" href="profile.html">Profile</a></li>
+                <li class="nav-item" data-guest><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item" data-guest><a class="btn btn-primary btn-sm" href="register.html">Register</a></li>
+                <li class="nav-item dropdown d-none" data-auth>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><span id="navUserLabel">User</span></a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                        <li><a class="dropdown-item" id="logoutButton" href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="page-header">
+    <div class="container">
+        <p class="text-primary fw-semibold mb-1">Moj račun</p>
+        <h1 class="display-6 fw-bold">Profile</h1>
+        <p class="lead text-muted mb-0">Pregled bodova, završenih izazova i vlastitih rezultata.</p>
+    </div>
+</header>
+
+<main class="section-padding">
+    <div class="container">
+        <section id="profileContent" class="mb-5">
+            <p class="text-muted">Učitavanje profila...</p>
+        </section>
+        <section>
+            <h2 class="h4 fw-bold mb-3">Moji rezultati</h2>
+            <div id="mySubmissions">
+                <p class="text-muted">Učitavanje rezultata...</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <span>Survival of the Fittest</span>
+        <span>Zaštićeni API endpointi preko tokena</span>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/profile.js"></script>
+</body>
+</html>

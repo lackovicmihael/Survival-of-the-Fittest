@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="2 MIN PLANK">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#212529" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#20c997" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" rx="34" fill="url(#g)"/>
+  <circle cx="760" cy="95" r="120" fill="#ffffff" opacity="0.16"/>
+  <circle cx="120" cy="440" r="165" fill="#ffffff" opacity="0.11"/>
+  <path d="M190 350 C280 240 390 260 485 165 C560 90 665 120 730 205" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" opacity="0.35"/>
+  <rect x="70" y="70" width="126" height="126" rx="28" fill="#ffffff" opacity="0.22"/>
+  <path d="M100 138 h66 M133 105 v66" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+  <text x="70" y="330" font-family="Inter, Arial, sans-serif" font-size="104" font-weight="800" fill="#ffffff">2 MIN</text>
+  <text x="74" y="415" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700" fill="#ffffff" opacity="0.92">PLANK</text>
+</svg>
